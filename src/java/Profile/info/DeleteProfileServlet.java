@@ -53,7 +53,7 @@ public class DeleteProfileServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("viewProfiles.jsp");
+        response.sendRedirect("viewProfiles.jsp?delete=success");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

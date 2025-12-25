@@ -75,6 +75,6 @@ public class EditProfileServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        response.sendRedirect("viewProfiles.jsp");
+        response.sendRedirect("viewProfiles.jsp?edit=success");
     }
 }

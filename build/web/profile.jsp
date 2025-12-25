@@ -183,11 +183,9 @@
         }
     %>
 
-    <div class="text-center">
-        <a href="ProfileForm.html" class="btn btn-custom px-4">Back to Form</a>
-    </div>
-    <div class="text-center">
+    <div class="mt-4 text-center">
         <a href="viewProfiles.jsp" class="btn btn-custom px-4">Other Students Info</a>
+        <a href="ProfileForm.html" class="btn btn-secondary ms-2">Back to Form</a>
     </div>
 
 </div>

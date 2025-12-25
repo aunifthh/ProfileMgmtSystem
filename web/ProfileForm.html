@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Form</title>
 
+    <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <style>
         body {
@@ -24,6 +26,12 @@
             color: #009999;
             font-weight: 600;
         }
+        /* Standardized Label Style */
+        label {
+            font-weight: bold;
+            color: #007777;
+            margin-bottom: 5px;
+        }
         .btn-custom {
             background-color: #009999;
             color: white;
@@ -32,6 +40,18 @@
         .btn-custom:hover {
             background-color: #007777;
             color: white;
+        }
+        /* Secondary button for "View List" */
+        .btn-view {
+            background-color: transparent;
+            color: #007777;
+            border: 1px solid #009999;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .btn-view:hover {
+            background-color: #f2fafa;
+            color: #004d4d;
         }
     </style>
 </head>
@@ -43,36 +63,41 @@
         <form action="ProfileServlet" method="post">
 
             <div class="mb-3">
-                <label class="form-label">Full Name <span style="color:red;">*</span></label>
+                <label class="form-label"><i class="bi bi-person-fill me-1"></i> Full Name <span style="color:red;">*</span></label>
                 <input type="text" class="form-control" name="name" placeholder="Enter your full name" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Student ID <span style="color:red;">*</span></label>
+                <label class="form-label"><i class="bi bi-card-text me-1"></i> Student ID <span style="color:red;">*</span></label>
                 <input type="text" class="form-control" name="studentId" placeholder="e.g., 2025123456" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Program <span style="color:red;">*</span></label>
+                <label class="form-label"><i class="bi bi-mortarboard-fill me-1"></i> Program <span style="color:red;">*</span></label>
                 <input type="text" class="form-control" name="program" placeholder="e.g., CDCS266" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Email <span style="color:red;">*</span></label>
+                <label class="form-label"><i class="bi bi-envelope-fill me-1"></i> Email <span style="color:red;">*</span></label>
                 <input type="email" class="form-control" name="email" placeholder="e.g., example@gmail.com" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Hobbies</label>
+                <label class="form-label"><i class="bi bi-heart-fill me-1"></i> Hobbies</label>
                 <input type="text" class="form-control" name="hobbies" placeholder="e.g., Cooking, Hiking">
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Self Introduction</label>
+                <label class="form-label"><i class="bi bi-chat-left-text-fill me-1"></i> Self Introduction</label>
                 <textarea class="form-control" name="intro" rows="4" placeholder="Write a short introduction..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-custom w-100">Submit</button>
+            <button type="submit" class="btn btn-custom w-100 mb-2">Submit Profile</button>
+            
+            <!-- Added "List of Students" Button -->
+            <a href="viewProfiles.jsp" class="btn btn-view w-100">
+                <i class="bi bi-people-fill me-1"></i> View Registered Students
+            </a>
         </form>
     </div>
 </div>
