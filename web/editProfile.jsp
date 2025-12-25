@@ -19,7 +19,7 @@
 
     <style>
         body {
-            background-color: #e9f7f7; /* Matching profile.jsp */
+            background-color: #e9f7f7; 
             font-family: Arial, sans-serif;
         }
 
@@ -29,7 +29,7 @@
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.15);
-            overflow: hidden; /* This keeps the sidebar corners rounded */
+            overflow: hidden; 
         }
 
         /* Standardized Sidebar */
@@ -41,9 +41,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Keeps items at the top like profile.jsp */
+            justify-content: flex-start; 
             gap: 20px;
-            height: 100%; /* Ensures it fills the height of the row */
+            height: 100%; 
         }
 
         .left-side img {
@@ -97,7 +97,6 @@
             color: white;
         }
         
-        /* Matching the intro box style from profile.jsp */
         .intro-edit-area {
             background: #f2fafa;
             border-left: 4px solid #009999;
@@ -110,10 +109,10 @@
 
 <div class="container">
     <div class="profile-card">
-        <!-- We use a single Row g-0 so the teal background touches the top/bottom perfectly -->
+        
         <div class="row g-0">
             
-            <!-- LEFT SIDE SIDEBAR (Teal) -->
+            <!-- LEFT SIDE -->
             <div class="col-md-4">
                 <div class="left-side">
                     <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Profile Icon">
@@ -122,13 +121,13 @@
                 </div>
             </div>
 
-            <!-- RIGHT SIDE CONTENT (White) -->
+            <!-- RIGHT SIDE -->
             <div class="col-md-8">
                 <div class="right-side">
                     <h2>Edit Student Profile</h2>
                     
                     <form action="EditProfileServlet" method="post">
-                        <!-- ID is hidden so user can't change it, but DB knows which row to update -->
+                       
                         <input type="hidden" name="id" value="<%= profile.getId() %>">
 
                         <div class="mb-3">
@@ -172,8 +171,8 @@
                 </div>
             </div>
 
-        </div> <!-- End Row -->
-    </div> <!-- End Card -->
+        </div> 
+    </div> 
 </div>
 
 </body>

@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Details</title>
 
-    <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
@@ -98,7 +97,7 @@
     </div>
     
     <%
-        String studentIdParam = request.getParameter("id"); // Get ID from URL
+        String studentIdParam = request.getParameter("id"); 
         
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -108,7 +107,6 @@
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             conn = DriverManager.getConnection("jdbc:derby://localhost:1527/student_profiles", "app", "app");
             
-            // Query for specific profile based on ID
             String query = "SELECT * FROM profiles WHERE id = ?";
             stmt = conn.prepareStatement(query);
             stmt.setInt(1, Integer.parseInt(studentIdParam));
@@ -119,7 +117,7 @@
 
     <div class="row g-0">
 
-        <!-- LEFT SIDE (Image and Name) -->
+        <!-- LEFT SIDE -->
         <div class="col-md-4 left-side">
             <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="profile icon">
             <h4 class="mt-3">
@@ -128,7 +126,7 @@
             <span class="badge bg-info text-dark">Student</span>
         </div>
 
-        <!-- RIGHT SIDE (Details) -->
+        <!-- RIGHT SIDE -->
         <div class="col-md-8 right-side">
             <ul class="list-group list-group-flush mb-4">
                 <li class="list-group-item bg-transparent">

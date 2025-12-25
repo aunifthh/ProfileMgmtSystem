@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Profile.info;
 
 import java.io.IOException;
@@ -16,22 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author JSL
- */
 @WebServlet(name = "DeleteProfileServlet", urlPatterns = {"/DeleteProfileServlet"})
 public class DeleteProfileServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -39,8 +21,7 @@ public class DeleteProfileServlet extends HttpServlet {
 
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(
-                "jdbc:derby://localhost:1527/student_profiles", "app", "app");
+            Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/student_profiles", "app", "app");
 
             PreparedStatement ps =
                 conn.prepareStatement("DELETE FROM profiles WHERE id=?");

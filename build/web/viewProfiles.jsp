@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background-color: #e9f7f7; /* Standardized background */
+            background-color: #e9f7f7;
             font-family: Arial, sans-serif;
             padding-bottom: 50px;
         }
@@ -31,7 +31,6 @@
             font-weight: 700;
         }
 
-        /* Standardized Teal Button */
         .btn-custom {
             background-color: #009999;
             color: white;
@@ -111,8 +110,7 @@
 
                     try {
                         Class.forName("org.apache.derby.jdbc.ClientDriver");
-                        conn = DriverManager.getConnection(
-                            "jdbc:derby://localhost:1527/student_profiles", "app", "app");
+                        conn = DriverManager.getConnection("jdbc:derby://localhost:1527/student_profiles", "app", "app");
 
                         ps = conn.prepareStatement("SELECT * FROM profiles");
                         rs = ps.executeQuery();
