@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Profile.bean;
+
+import java.io.Serializable;
+
+public class ProfileBean implements Serializable {
+    private String name;
+    private String studentId;
+    private String program;
+    private String email;
+    private String hobbies;
+    private String intro;
+
+    public ProfileBean() {
+    }
+
+    public String getName() { 
+        return name; 
+    }
+    public String getStudentId() { 
+        return studentId; 
+    }
+    public String getProgram() { 
+        return program; 
+    }
+    public String getEmail() { 
+        return email; 
+    }
+    public String getHobbies() { 
+        return hobbies; 
+    }
+    public String getIntro() { 
+        return intro; 
+    }
+      
+    public void setName(String name) { 
+        this.name = name; 
+    }
+    public void setStudentId(String studentId) { 
+        this.studentId = studentId; 
+    }
+    public void setProgram(String program) { 
+        this.program = program; 
+    }
+    public void setEmail(String email) { 
+        this.email = email; 
+    }
+    public void setHobbies(String hobbies) { 
+        this.hobbies = hobbies; 
+    }
+    public void setIntro(String intro) { 
+        this.intro = intro; 
+    }
+}
