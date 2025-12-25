@@ -8,6 +8,7 @@ package Profile.bean;
 import java.io.Serializable;
 
 public class ProfileBean implements Serializable {
+    private int id;
     private String name;
     private String studentId;
     private String program;
@@ -18,6 +19,9 @@ public class ProfileBean implements Serializable {
     public ProfileBean() {
     }
 
+    public int getId() {
+        return id;
+    }
     public String getName() { 
         return name; 
     }
@@ -37,6 +41,9 @@ public class ProfileBean implements Serializable {
         return intro; 
     }
       
+    public void setId (int id){
+        this.id = id;
+    }
     public void setName(String name) { 
         this.name = name; 
     }
